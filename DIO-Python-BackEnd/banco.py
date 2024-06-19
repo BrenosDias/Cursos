@@ -22,9 +22,9 @@ while True:
 
         saldo += deposito
 
-        extrato += f" Deposito R${deposito} |"
+        extrato += f" Deposito R${deposito:.2f} |"
 
-        print(f"Seu deposito foi executado, seu saldo atual é de R$ {saldo}.")
+        print(f"Seu deposito foi executado, seu saldo atual é de R$ {saldo:.2f}.")
     elif opcao == "s":
         if numero_saques < LIMITE_SAQUES:
             saque = float(input("Qual você deseja sacar?"))
@@ -32,9 +32,9 @@ while True:
                 print("O valor desejado supera o seu limite de R$ 500.00.")
             else:
                 saldo -= saque
-                print(f"Seu saque foi executado, seu saldo atual é de R$ {saldo}.")
+                print(f"Seu saque foi executado, seu saldo atual é de R$ {saldo:.2f}.")
 
-                extrato += f" Saque R${saque} |"
+                extrato += f" Saque R${saque:.2f} |"
             numero_saques += 1 
         else:
             print("Você já atingiu o seu limite de saques diários")
